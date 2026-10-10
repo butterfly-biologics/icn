@@ -59,7 +59,7 @@ export function SiteHeader() {
 
       {open ? (
         <nav id="mobile-nav" className="flex flex-col gap-6 pb-8 lg:hidden" aria-label="Primary">
-          <ul className="flex flex-col gap-4 font-mono text-sm text-cream uppercase">
+          <ul className="flex flex-col gap-4 font-mono text-sm text-cream bg-brown uppercase">
             {links.map((link) => (
               <li key={link.href}>
                 <Link href={link.href} onClick={() => setOpen(false)}>
@@ -70,7 +70,7 @@ export function SiteHeader() {
           </ul>
           <div className="flex flex-col items-start gap-4">
             <ButtonLink href={portalUrl} variant="login">
-              ogin
+              Login
             </ButtonLink>
             <ButtonLink href="/get-started">Get started</ButtonLink>
           </div>
