@@ -52,15 +52,15 @@ export const panels = [
 export const principles = [
   {
     title: "Biology, not averages.",
-    body: "A cheek swab looks at genetic traits that may relate to a person’s health and wellness priorities.",
+    body: "A cheek swab looks at genetic traits that may relate to your patient’s health and wellness priorities.",
   },
   {
     title: "Goals, not guesswork.",
-    body: "Each panel stays focused on the questions a patient and provider want to explore.",
+    body: "Each panel stays focused on the questions you and your patient want to explore.",
   },
   {
     title: "A conversation, not a conclusion.",
-    body: "Results return in about 3–4 weeks, ready for a shared discussion about next steps.",
+    body: "Results return in about 3–4 weeks, ready for a follow-up visit about next steps.",
   },
 ] as const;
 
@@ -68,17 +68,17 @@ export const steps = [
   {
     number: "01",
     title: "Kits shipped direct to patient",
-    body: "Choose a panel. Your ICONUS kit comes directly to you.",
+    body: "Choose a panel and order through GenoGPO. The kit ships straight to your patient.",
   },
   {
     number: "02",
     title: "Patient swabs cheek, mails back with prepaid return mailer",
-    body: "Complete cheek swab at home, then use the prepaid return mailer to send it back.",
+    body: "Your patient completes the cheek swab at home and sends it back in the prepaid mailer.",
   },
   {
     number: "03",
     title: "Results delivered to patient portal & provider portal",
-    body: "Results are available in about 3–4 weeks.",
+    body: "Results land in your provider portal and your patient’s portal in about 3–4 weeks.",
   },
 ] as const;
 
@@ -117,29 +117,34 @@ export const stages = [
 
 export const questions = [
   {
-    question: "How do I choose a test panel?",
+    question: "How do I order kits?",
     answer:
-      "Start with a conversation with your provider about your goals, history and what you hope to understand. Together, choose the panel that fits where you are today.",
+      "ICONUS kits are purchased through GenoGPO, our group purchasing organization. Log in at genogpo.com to choose panels and place an order.",
   },
   {
-    question: "What sample do I need to provide?",
+    question: "How do I choose a panel for my patient?",
     answer:
-      "A simple cheek swab, completed at home. Your kit ships directly to you and includes a prepaid return mailer.",
+      "Start with your patient’s goals, history and what they hope to understand. Each panel focuses on one area, and the quiz can suggest a starting point.",
   },
   {
-    question: "Where will I see my results?",
+    question: "What sample does my patient provide?",
     answer:
-      "Results are delivered to both the patient portal and provider portal, so you can review the findings together.",
+      "A simple cheek swab, completed at home. The kit ships directly to your patient and includes a prepaid return mailer.",
+  },
+  {
+    question: "Where will I see results?",
+    answer:
+      "Results are delivered to your provider portal and your patient’s portal, so you can review the findings together.",
   },
   {
     question: "How long do results take?",
     answer:
-      "Results arrive in the ICONUS portal in about 3–4 weeks. Your provider can then schedule a follow-up to discuss a plan.",
+      "About 3–4 weeks. Once results are in, schedule a follow-up visit to walk through them with your patient.",
   },
   {
     question: "What happens after the test?",
     answer:
-      "Review the results with your provider and build a plan around your priorities. Follow-up visits are an opportunity to check in and refine that plan over time.",
+      "Review the results with your patient and build a plan around their priorities. Follow-up visits are a chance to check progress and refine that plan over time.",
   },
 ] as const;
 
@@ -147,32 +152,37 @@ export const moreQuestions = [
   {
     question: "Where do I log in?",
     answer:
-      "Patients and providers sign in at my.iconus.org. Results, when they are ready, are delivered to the patient portal and the provider portal.",
+      "To purchase kits, log in to GenoGPO at genogpo.com. To view results, providers and patients sign in at my.iconus.org.",
   },
   {
-    question: "Does the quiz choose a panel for me?",
+    question: "Can I order in bulk or under my practice’s brand?",
     answer:
-      "The quiz suggests a starting point. It is not a diagnosis and it does not place an order. Choose the final panel with your provider.",
+      "Yes. Use the provider contact form to ask about bulk kits or a white-label version of ICONUS.",
+  },
+  {
+    question: "Does the quiz choose a panel?",
+    answer:
+      "The quiz suggests a starting point. It is not a diagnosis and it does not place an order. The final panel is chosen by the provider with the patient.",
+  },
+  {
+    question: "I’m a patient. Where do I start?",
+    answer:
+      "ICONUS is meant to be used with a provider. Visit the patient page to register a kit, sign in to see results, or take the quiz to bring a starting point to your next visit.",
   },
   {
     question: "How do I reach ICONUS?",
     answer:
-      "Use the contact page to send a note. If you already have results, sign in to the portal and follow up with your provider.",
-  },
-  {
-    question: "Can I take the test without a provider?",
-    answer:
-      "ICONUS is meant to be used with a provider. The kit, the panel, and the plan that follows are part of that conversation.",
+      "Use the contact page. Providers can ask about ordering, bulk kits or white label. Patients with results should sign in to the portal and follow up with their provider.",
   },
 ] as const;
 
 export const essentials = [
+  "Kits ship direct to your patients",
   "Simple at-home cheek swab",
-  "Panels chosen around specific goals",
-  "Results for patient and provider",
-  "Kits shipped directly",
+  "Eight goal-focused panels",
+  "Results in your provider portal",
   "Results in about 3–4 weeks",
-  "Reviewed in a follow-up visit",
+  "Built for the follow-up visit",
 ] as const;
 
 export type PanelSlug = (typeof panels)[number]["slug"];
@@ -205,7 +215,7 @@ export const panelPages: Record<
   },
   "hormone-skin": {
     audience:
-      "A fit for aesthetic and hormonal wellness conversations with your provider.",
+      "A fit for aesthetic and hormonal wellness conversations with your patient.",
     focuses: ["Hormone balance", "Skin health and collagen", "Aging markers"],
   },
   cognition: {
@@ -219,7 +229,7 @@ export const panelPages: Record<
   },
   peptide: {
     audience:
-      "A fit when peptides are already part of the conversation with your provider.",
+      "A fit when peptides are already part of your patient’s plan.",
     focuses: [
       "Peptide pathways",
       "Individual response",

@@ -11,7 +11,7 @@ export function Panels() {
           Precision care.
         </h2>
         <p className="max-w-xl text-lg leading-[1.6] font-light text-stone lg:pt-2 lg:text-2xl">
-          Choose from a variety of test panels to give patients targeted
+          Choose from eight test panels to give your patients targeted
           recommendations for their health goals.
         </p>
       </div>

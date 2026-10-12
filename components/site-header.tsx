@@ -8,8 +8,9 @@ import { portalUrl } from "@/lib/site";
 
 const links = [
   { href: "/#how-it-works", label: "How it works" },
-  { href: "/#panels", label: "Shop" },
-  { href: "/providers", label: "For providers" },
+  { href: "/#panels", label: "Test panels" },
+  { href: "/providers", label: "For your practice" },
+  { href: "/patients", label: "Patients" },
 ];
 
 export function SiteHeader() {
@@ -59,7 +60,7 @@ export function SiteHeader() {
 
       {open ? (
         <nav id="mobile-nav" className="flex flex-col gap-6 pb-8 lg:hidden" aria-label="Primary">
-          <ul className="flex flex-col gap-4 font-mono text-sm text-cream bg-brown uppercase">
+          <ul className="flex flex-col gap-4 font-mono text-sm text-cream uppercase">
             {links.map((link) => (
               <li key={link.href}>
                 <Link href={link.href} onClick={() => setOpen(false)}>

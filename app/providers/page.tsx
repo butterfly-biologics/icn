@@ -20,7 +20,10 @@ export default function ProvidersPage() {
       </PageIntro>
       <section className="flex flex-col items-start gap-6 px-5 py-16 sm:px-8 lg:px-16 lg:py-24">
         <div className="flex flex-col items-start gap-4 sm:flex-row">
-          <ButtonLink href="/contact/providers">Bulk kits or white label</ButtonLink>
+          <ButtonLink href="/get-started">Get started</ButtonLink>
+          <ButtonLink href="/contact/providers" variant="outline">
+            Bulk kits or white label
+          </ButtonLink>
           <ButtonLink href={portalUrl} variant="outline">
             Portal login
           </ButtonLink>

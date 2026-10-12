@@ -16,7 +16,7 @@ export function Journey() {
           from understanding your patient’s biology to building a plan, preparing
           for it and growing with it over time.
         </p>
-        <ButtonLink href="/providers">Bring ICONUS to your practice</ButtonLink>
+        <ButtonLink href="/get-started">Bring ICONUS to your practice</ButtonLink>
       </div>
 
       <ol className="min-w-0 flex-1">

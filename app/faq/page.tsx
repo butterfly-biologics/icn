@@ -7,7 +7,7 @@ import { moreQuestions, questions } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Questions — ICONUS",
-  description: "Practical answers about ICONUS kits, panels, results, and the patient portal.",
+  description: "Practical answers about ordering ICONUS kits, choosing panels, and reviewing results.",
 };
 
 export default function FaqPage() {

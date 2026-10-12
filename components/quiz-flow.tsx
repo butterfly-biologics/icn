@@ -161,11 +161,12 @@ export function QuizFlow() {
               tabIndex={-1}
               className="mt-4 text-4xl leading-[1.08] outline-none sm:text-5xl lg:text-[60px] lg:tracking-[-1.2px]"
             >
-              Which questions matter to you?
+              Which panel fits?
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-[1.6] font-light text-ink sm:text-2xl">
-              Four short questions. At the end, you’ll see the ICONUS panel that fits where you are
-              today.
+              Four short questions about your patient’s goals. At the end, you’ll see the ICONUS
+              panel that fits where they are today. Patients can take it too, and bring the result
+              to their next visit.
             </p>
             <button
               type="button"
@@ -180,7 +181,7 @@ export function QuizFlow() {
 
         {finished && match ? (
           <section>
-            <p className="font-mono text-sm text-gold uppercase">Your match</p>
+            <p className="font-mono text-sm text-gold uppercase">Best match</p>
             <h1
               id="quiz-heading"
               tabIndex={-1}
@@ -220,7 +221,7 @@ export function QuizFlow() {
               </p>
             ) : null}
             <p className="mt-10 font-mono text-sm text-ink uppercase">
-              Genetic insight is one part of a broader conversation with your provider.
+              Genetic insight is one part of a broader provider–patient conversation.
             </p>
           </section>
         ) : null}

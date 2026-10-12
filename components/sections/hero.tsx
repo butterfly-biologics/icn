@@ -50,9 +50,9 @@ export function Hero() {
               patient, so you can chart a new path toward transformational health together.
             </p>
             <div className="flex flex-col items-start gap-3 sm:flex-row">
-              <ButtonLink href="#panels">Explore test panels</ButtonLink>
-              <ButtonLink href="#how-it-works" variant="ghost">
-                For patients
+              <ButtonLink href="/get-started">Get started</ButtonLink>
+              <ButtonLink href="#panels" variant="ghost">
+                Explore test panels
               </ButtonLink>
             </div>
           </div>

@@ -6,16 +6,10 @@ import { portalUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact — ICONUS",
-  description: "Patient questions, provider orders, kit registration, and GenoGPO.",
+  description: "Provider orders, bulk kits, white label, portal sign-in, and patient questions.",
 };
 
 const paths = [
-  {
-    title: "Patients",
-    body: "Questions about a kit, a panel, or results.",
-    href: "/contact/patients",
-    label: "Patient contact",
-  },
   {
     title: "Providers",
     body: "Ask about bulk kits or a white-label version.",
@@ -23,16 +17,22 @@ const paths = [
     label: "Provider contact",
   },
   {
-    title: "Portal",
-    body: "Register a kit or sign in at my.iconus.org.",
-    href: portalUrl,
-    label: "Register or sign in",
+    title: "Order kits",
+    body: "Practices purchase ICONUS through the GenoGPO portal.",
+    href: "/get-started",
+    label: "Get started",
   },
   {
-    title: "GenoGPO",
-    body: "Practices order through the group purchasing organization.",
-    href: "/gpo",
-    label: "Go to GenoGPO",
+    title: "Portal",
+    body: "Sign in at my.iconus.org to view results or register a kit.",
+    href: portalUrl,
+    label: "Sign in",
+  },
+  {
+    title: "Patients",
+    body: "Questions about a kit, a panel, or results.",
+    href: "/contact/patients",
+    label: "Patient contact",
   },
 ];
 

@@ -10,8 +10,8 @@ export function Blueprint() {
             The missing piece in every patient plan.
           </h2>
           <p className="mt-6 text-lg leading-[1.6] font-light text-ink sm:text-2xl">
-            A cheek swab gives the patient and the provider the same starting point: that
-            person’s own biology.
+            A cheek swab gives you and your patient the same starting point: their own
+            biology.
           </p>
         </div>
         <Image

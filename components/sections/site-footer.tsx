@@ -14,10 +14,10 @@ const columns = [
   {
     title: "Take the next step",
     links: [
+      { href: "/get-started", label: "Order kits" },
+      { href: "/providers", label: "For your practice" },
       { href: "/quiz", label: "Take the quiz" },
-      { href: "/providers", label: "For providers" },
-      { href: "/get-started", label: "Get started" },
-      { href: portalUrl, label: "Register a kit" },
+      { href: "/patients", label: "For patients" },
       { href: portalUrl, label: "Portal login" },
     ],
   },
@@ -33,8 +33,8 @@ const columns = [
     title: "Help",
     links: [
       { href: "/faq", label: "FAQ" },
-      { href: "/contact/patients", label: "Patient contact" },
       { href: "/contact/providers", label: "Provider contact" },
+      { href: "/contact/patients", label: "Patient contact" },
       { href: "/gpo", label: "GenoGPO" },
       { href: "/privacy", label: "Privacy" },
       { href: "/terms", label: "Terms" },
@@ -83,7 +83,7 @@ export function SiteFooter() {
       <div className="my-10 h-px bg-line" />
       <div className="flex flex-col gap-4 font-mono text-sm text-ink uppercase lg:flex-row lg:items-start lg:justify-between">
         <p>© 2026 ICONUS</p>
-        <p>Genetic insight is one part of a broader conversation with your provider.</p>
+        <p>Genetic insight is one part of a broader provider–patient conversation.</p>
         <p className="text-gold">Individual by design</p>
       </div>
     </footer>

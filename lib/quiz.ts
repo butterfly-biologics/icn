@@ -14,7 +14,7 @@ export type QuizQuestion = {
 
 export const quizQuestions: QuizQuestion[] = [
   {
-    prompt: "What feels most important to understand?",
+    prompt: "What is most important to understand?",
     options: [
       { label: "Immune function and healthy aging", scores: { "immunity-longevity": 3 } },
       { label: "Training, recovery, and endurance", scores: { performance: 3 } },
@@ -25,7 +25,7 @@ export const quizQuestions: QuizQuestion[] = [
     ],
   },
   {
-    prompt: "What should the result help you do next?",
+    prompt: "What should the results help guide next?",
     options: [
       { label: "Talk about long-term prevention", scores: { "immunity-longevity": 2 } },
       { label: "Shape training or nutrition", scores: { performance: 2 } },
