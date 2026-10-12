@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import { PlaceholderForm } from "@/components/placeholder-form";
 import { PageIntro } from "@/components/page-intro";
 import { PageShell } from "@/components/page-shell";
 import { contactEmail, portalUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Patient contact — ICONUS",
   description: "Questions about an ICONUS kit, a panel, or results.",
-};
+  path: "/contact/patients",
+});
 
 const fields = [
   { name: "name", label: "Name", autoComplete: "name" },

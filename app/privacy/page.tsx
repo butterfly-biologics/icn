@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { PageIntro } from "@/components/page-intro";
 import { PageShell } from "@/components/page-shell";
 import { contactEmail, portalUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Privacy — ICONUS",
   description: "How this ICONUS website handles the information you share with it.",
-};
+  path: "/privacy",
+});
 
 const sections = [
   {

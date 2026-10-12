@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ButtonLink } from "@/components/button-link";
@@ -17,10 +18,11 @@ export async function generateMetadata({ params }: PanelPageProps): Promise<Meta
   const { slug } = await params;
   const panel = getPanel(slug);
   if (!panel) return { title: "Panel — ICONUS" };
-  return {
+  return pageMetadata({
     title: `${panel.title} — ICONUS`,
     description: panel.body,
-  };
+    path: `/panels/${panel.slug}`,
+  });
 }
 
 export default async function PanelPage({ params }: PanelPageProps) {

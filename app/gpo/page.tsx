@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import { ButtonLink } from "@/components/button-link";
 import { PageIntro } from "@/components/page-intro";
 import { PageShell } from "@/components/page-shell";
 import { gpoUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "GenoGPO — ICONUS",
   description: "GenoGPO is the group purchasing organization for practices that order with ICONUS.",
-};
+  path: "/gpo",
+});
 
 export default function GpoPage() {
   return (

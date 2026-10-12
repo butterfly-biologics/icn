@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { PageIntro } from "@/components/page-intro";
 import { PageShell } from "@/components/page-shell";
 import { contactEmail } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Terms — ICONUS",
   description: "How to use the ICONUS website, quiz, and panel descriptions.",
-};
+  path: "/terms",
+});
 
 const sections = [
   {

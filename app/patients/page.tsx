@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import { ButtonLink } from "@/components/button-link";
 import { PageIntro } from "@/components/page-intro";
 import { PageShell } from "@/components/page-shell";
 import { portalUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "For patients — ICONUS",
   description:
     "Register an ICONUS kit, sign in to see results, or find a panel to discuss with your provider.",
-};
+  path: "/patients",
+});
 
 const paths = [
   {

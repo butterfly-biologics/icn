@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import { ButtonLink } from "@/components/button-link";
 import { PageIntro } from "@/components/page-intro";
 import { PageShell } from "@/components/page-shell";
 import { stages } from "@/lib/content";
 import { portalUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "For providers — ICONUS",
   description:
     "Bring ICONUS to your practice. A focused genetic panel, results in both portals, and a plan you guide.",
-};
+  path: "/providers",
+});
 
 export default function ProvidersPage() {
   return (

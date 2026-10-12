@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import { ButtonLink } from "@/components/button-link";
 import { PageIntro } from "@/components/page-intro";
 import { PageShell } from "@/components/page-shell";
 import { portalUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Contact — ICONUS",
   description: "Provider orders, bulk kits, white label, portal sign-in, and patient questions.",
-};
+  path: "/contact",
+});
 
 const paths = [
   {

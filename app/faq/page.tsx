@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { FaqList } from "@/components/faq-list";
 import { PageIntro } from "@/components/page-intro";
 import { PageShell } from "@/components/page-shell";
 import { moreQuestions, questions } from "@/lib/content";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Questions — ICONUS",
   description: "Practical answers about ordering ICONUS kits, choosing panels, and reviewing results.",
-};
+  path: "/faq",
+});
 
 export default function FaqPage() {
   return (

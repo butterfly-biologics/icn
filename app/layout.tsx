@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
+import Script from "next/script";
+import { pageMetadata, siteUrl } from "@/lib/metadata";
 import "./globals.css";
+
+const GTM_ID = "GTM-WQX22SZH";
 
 const plex = IBM_Plex_Mono({
   subsets: ["latin"],
@@ -9,9 +13,13 @@ const plex = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ICONUS — Reveal what is possible",
-  description:
-    "Iconus genetic test kits uncover the biological blueprint within every patient, so you can chart a new path together.",
+  metadataBase: siteUrl,
+  ...pageMetadata({
+    title: "ICONUS — Reveal what is possible",
+    description:
+      "Iconus genetic test kits uncover the biological blueprint within every patient, so you can chart a new path together.",
+    path: "/",
+  }),
 };
 
 export default function RootLayout({
@@ -21,7 +29,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={plex.variable}>
-      <body>{children}</body>
+      <body>
+        <Script id="google-tag-manager" strategy="beforeInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`}
+        </Script>
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
+        {children}
+      </body>
     </html>
   );
 }

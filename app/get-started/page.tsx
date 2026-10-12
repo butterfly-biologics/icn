@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { ButtonLink } from "@/components/button-link";
 import { PageIntro } from "@/components/page-intro";
 import { PageShell } from "@/components/page-shell";
 import { gpoUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Order ICONUS — ICONUS",
   description:
     "ICONUS kits are purchased through GenoGPO. Log in to the GenoGPO portal to choose panels and place an order for your practice.",
-};
+  path: "/get-started",
+});
 
 const orderSteps = [
   {
