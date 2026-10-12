@@ -11,9 +11,9 @@ type PageMetadataInput = {
 };
 
 const shareImage = {
-  url: "/opengraph-image",
-  width: 1200,
-  height: 630,
+  url: "/og-image.png",
+  width: 1024,
+  height: 537,
   alt: "ICONUS — Reveal what is possible",
 };
 
