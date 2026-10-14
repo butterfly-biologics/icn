@@ -38,7 +38,7 @@ export const panels = [
   {
     slug: "glp-1",
     title: "GLP-1 Benefits",
-    body: "This panel looks at 25 genetic markers associated with how a patient’s biology may interact with GLP-1 medications.",
+    body: "This panel looks at 25 genetic markers associated with how a patient’s biology may interact with GLP-1 medications. Genetic variation shapes how each patient stores fat, builds lean mass, and responds, so you can prescribe the GLP that fits.",
     icon: { src: "/brand/panel-glp1.svg", width: 33.2, height: 33.2 },
   },
   {
@@ -191,63 +191,344 @@ export function getPanel(slug: string) {
   return panels.find((panel) => panel.slug === slug);
 }
 
+export type PanelMarker = {
+  title: string;
+  body: string;
+};
+
 export const panelPages: Record<
   PanelSlug,
-  { audience: string; focuses: readonly string[] }
+  {
+    audience: string;
+    focuses: readonly string[];
+    markersIntro?: string;
+    markers: readonly PanelMarker[];
+  }
 > = {
   "immunity-longevity": {
-    audience:
-      "A fit when the conversation is about staying well over the long term.",
+    audience: "For long-term health and healthy aging.",
     focuses: [
       "Immune function",
       "Inflammation response",
       "How the body ages over time",
     ],
+    markers: [
+      {
+        title: "Methylation",
+        body: "Markers covering key methylation pathways including COMT, MTHFR Activity, MTR, MTRR, general methylation efficiency, and Choline Need — factors that affect how the body processes nutrients, detoxifies, and regulates mood and energy.",
+      },
+      {
+        title: "Longevity & Cellular Aging",
+        body: "Genetic markers associated with Longevity Propensity and Telomere Length Propensity — two indicators of biological aging at the cellular level.",
+      },
+      {
+        title: "Mitochondrial Health",
+        body: "Marker assessing Mitochondrial Function — how efficiently the body produces cellular energy.",
+      },
+      {
+        title: "Oxidative Stress",
+        body: "Marker examining genetic predisposition to oxidative stress and the body’s antioxidant support capacity.",
+      },
+      {
+        title: "Immune & Inflammation",
+        body: "Markers covering Mast Cell Activation / IgE Levels and IL-10 Inflammation Risk — indicators of immune reactivity and inflammatory response.",
+      },
+      {
+        title: "Immune System Support Peptides",
+        body: "Genetic markers assessing individual response propensity to immune-supportive peptides: TB4 / TB-500 (resolution capacity) and TA1 / Thymosin Alpha 1 (immune support).",
+      },
+      {
+        title: "Longevity & Anti-Aging Peptides",
+        body: "Markers examining genetic factors related to anti-aging peptide response including TA1 / Thymosin Alpha 1 (anti-inflammatory), FOXO4-DRI (healthy aging), Epitalon (telomere maintenance), and TB4 / TB-500 (connective tissue).",
+      },
+    ],
   },
   performance: {
-    audience:
-      "A fit when training, recovery, or endurance is the question you want to explore.",
+    audience: "For training, recovery, and endurance.",
     focuses: [
       "Exercise performance",
       "Muscle development and recovery",
       "Endurance",
     ],
+    markers: [
+      {
+        title: "Strength & Muscle",
+        body: "Markers associated with genetic predisposition for Strength and Muscle Mass development.",
+      },
+      {
+        title: "Cardiovascular & Endurance",
+        body: "Markers covering VO2 Max Trainability Propensity, Aerobic Training Benefit, Elite Endurance Propensity, and Elite Power Propensity — helping identify whether a patient is genetically wired for endurance or power-based performance.",
+      },
+      {
+        title: "Fatigue & Recovery",
+        body: "Markers examining Muscle Endurance and Muscle Recovery Speed — how efficiently the body bounces back after physical exertion.",
+      },
+      {
+        title: "Injury Risk",
+        body: "Genetic markers associated with soft tissue vulnerability including Achilles Risk, Cartilage Risk, and General Soft Tissue Risk.",
+      },
+      {
+        title: "Hormonal Factors",
+        body: "Markers covering testosterone-related genetic factors: Testosterone Level Propensity, PSA Level Propensity, LH Levels, Conversion from Testosterone to Estrogen, SHBG Level Propensity, and DHT Level Propensity.",
+      },
+      {
+        title: "Athletic Performance & Recovery Peptides",
+        body: "Genetic markers assessing individual response propensity to performance peptides: BPC-157 (soft tissue recovery), MOTS-C (exercise adaptation), CJC-1295 (recovery), TB4 / TB-500 (connective tissue), and IGF-1 LR3 (training recovery).",
+      },
+      {
+        title: "Fat Loss & Body Composition Peptides",
+        body: "Markers examining genetic factors related to body composition peptide response: 5-amino-1MQ (weight maintenance), AOD-9604 (weight maintenance), Tesamorelin (body composition), and CJC-1295 (lean mass).",
+      },
+    ],
   },
   "hormone-skin": {
-    audience:
-      "A fit for aesthetic and hormonal wellness conversations with your patient.",
+    audience: "For hormone balance and skin health.",
     focuses: ["Hormone balance", "Skin health and collagen", "Aging markers"],
+    markers: [
+      {
+        title: "Testosterone",
+        body: "Markers covering Testosterone Level Propensity, PSA Level Propensity, LH Levels, Conversion from Testosterone to Estrogen, SHBG Level Propensity, and DHT Level Propensity.",
+      },
+      {
+        title: "Estrogen",
+        body: "Markers examining Estrogen Level Propensity, Estrogen Metabolite Elimination, and Estrogen Receptor Response.",
+      },
+      {
+        title: "Progesterone",
+        body: "Markers associated with Progesterone Metabolism (CYP2C19) and Progesterone Receptors.",
+      },
+      {
+        title: "Nitric Oxide",
+        body: "Marker assessing genetic factors related to Nitric Oxide Production — a key factor in vascular health and circulation.",
+      },
+      {
+        title: "Skin Aging & Health",
+        body: "Markers covering Rate of Skin Aging, Skin Antioxidant Capacity, Skin Hydration, Skin Elasticity, and Rate of Under-Eye Wrinkle Development.",
+      },
+      {
+        title: "Skin Risks",
+        body: "Genetic markers associated with Basal Cell Carcinoma Risk and Melanoma Risk.",
+      },
+      {
+        title: "Hair Health",
+        body: "Markers examining Hormone-related Hair Loss (male), Immune-based Hair Loss Propensity, Greying Hair, Selenium Deficiency Risk (Hair Health), Zinc Supplementation Benefit (Hair Health), and Vitamin A Conversion (Hair Health).",
+      },
+      {
+        title: "Nutrient Absorption",
+        body: "Marker covering Vitamin E Absorption — relevant to skin and hormonal health.",
+      },
+      {
+        title: "Skin, Hair & Cosmetic Peptides",
+        body: "Genetic markers assessing individual response propensity to aesthetic peptides: TB4 / TB-500 (resolution capacity), Epitalon (redox stress handling), GHK-Cu (skin aging susceptibility), and Melanotan-2 (photoaging susceptibility).",
+      },
+    ],
   },
   cognition: {
-    audience: "A fit when memory, focus, or stress response is the priority.",
+    audience: "For memory, focus, mood, and sleep.",
     focuses: ["Memory and focus", "Stress response", "Brain health"],
+    markers: [
+      {
+        title: "Sleep",
+        body: "Genetic markers associated with Deep Sleep Quality, Reported Sleep Quality, and Ideal Sleep Window.",
+      },
+      {
+        title: "Mood & Mental Health",
+        body: "Markers related to Anxiety Propensity, Depression Propensity, Mood-induced Sleeplessness Risk, and Postpartum Depression Propensity.",
+      },
+      {
+        title: "Stress & Nervous System",
+        body: "Markers covering Stress Adaptation and Autonomic Nervous System function, including genetic factors that may influence individual response to stress-related peptides: Semax (stress handling, mood-sleep coupling), Selank (mood regulation, anxiolytic response, stress-sleep coupling), FOXO4-DRI (stress resilience), and BPC-157 (pain burden).",
+      },
+      {
+        title: "Focus & Attention",
+        body: "Genetic markers associated with ADHD Propensity.",
+      },
+      {
+        title: "Cognitive Enhancement & Brain Health",
+        body: "Markers examining genetic factors related to executive function, attention, memory, global cognition, and neurodegeneration risk — including individual response propensity to cognitive peptides: Semax, Cerebrolysin, and DiHexa.",
+      },
+      {
+        title: "Melatonin Metabolism",
+        body: "Genetic marker for Melatonin Metabolism (CYP1A2), assessing how efficiently the body processes melatonin.",
+      },
+    ],
   },
   lifestyle: {
-    audience:
-      "A fit for everyday recommendations around sleep, stress, metabolism, and nutrients.",
+    audience: "For everyday sleep, stress, metabolism, and nutrition.",
     focuses: ["Metabolism", "Sleep and stress response", "Everyday nutrient needs"],
+    markers: [
+      {
+        title: "Hormones",
+        body: "Markers covering Testosterone, Estrogen, Progesterone, Cortisol, DHEA, Thyroid function, Autoimmune Thyroid risk, and Additional Hormone Genetics.",
+      },
+      {
+        title: "Fitness & Exercise",
+        body: "Markers examining Injury Risk, Fatigue and Recovery, Strength and Muscle, VO2 Max, Aerobic Training Benefit, High Intensity vs Endurance propensity, and Additional Exercise Genetics.",
+      },
+      {
+        title: "Cognition & Brain Health",
+        body: "Markers associated with General Cognition, Hippocampal Volume, Migraines, Parkinson’s risk, Stroke and White Matter Risks, and Cognition Modulators.",
+      },
+      {
+        title: "Emotional Health",
+        body: "Markers covering Depression Propensity, Anxiety Propensity, Stress Response, ADHD Propensity, and OCD & Rumination.",
+      },
+      {
+        title: "Immunity & Inflammation",
+        body: "Markers examining Mast Cell / IgE Levels, General Inflammation, Oxidative Stress, Histamine Sensitivity, Mold Severity, Asthma, Environmental Sensitivity, IL-10 Inflammation Risk, and Mitochondrial function.",
+      },
+      {
+        title: "Metabolic Health & Diabetes Risk",
+        body: "Markers associated with Insulin Resistance Propensity, T2D Propensity, Leptin Propensity, Adiponectin Levels, Appetite / Fullness Sensing, and Caffeine Effects on Glucose.",
+      },
+      {
+        title: "Food Sensitivities & Nutrition",
+        body: "Markers covering Lactose Intolerance Risk, Gluten Risk, Weight Gain from Dairy Fat, GAD1 Activity, Stress-induced Sleeplessness Risk, and Ideal Diet Plan.",
+      },
+      {
+        title: "Vitamins & Minerals",
+        body: "Markers examining B Vitamins (B6, B7/Biotin, B9, B12, Folic Acid, MTHFR Activity), Vitamin D (Inactive vs Active, Absorption, Deficiency Risk), Vitamin E Absorption, Electrolytes (Magnesium, Sodium, Potassium), Selenium and Iodine, and Iron levels (Overload Risk, Deficiency Risk, Serum Propensity, Transferrin).",
+      },
+      {
+        title: "Methylation",
+        body: "Markers covering COMT, MTHFR Activity, MTR, MTRR, general methylation efficiency, and Choline Need.",
+      },
+      {
+        title: "Skin Health",
+        body: "Markers associated with Rate of Skin Aging, Skin Hydration, Skin Elasticity, Wrinkle Development (crow’s feet, under-eye, upper eyelid sagging), Skin Glycation, and Skin Antioxidant Capacity.",
+      },
+      {
+        title: "Sleep & Recovery",
+        body: "Markers covering Deep Sleep Quality, Reported Sleep Quality, and Cold Plunge response (Cold Inflammation Benefit, Cold Plunge Tolerance).",
+      },
+      {
+        title: "Longevity & Cellular Health",
+        body: "Markers examining Longevity Propensity, Telomere Length Propensity, Heat Shock Protein Levels, and Sauna Benefit.",
+      },
+      {
+        title: "Peptide Genetic Library",
+        body: "The most extensive peptide response section across all panels — genetic markers assessing individual response propensity across 12 peptide categories: Fat Loss & Body Composition, Autonomic Nervous System & Stress Physiology, Mitochondrial Health & Metabolic Optimization, Longevity & Anti-Aging, Cognitive Enhancement & Brain Health, Gut Health & Nutrient Absorption, Skin, Hair & Cosmetic Health, Immune System Support, Athletic Performance & Recovery, Hormonal Regulation & Growth Hormone Support, GLP-1 and GLP-2 Peptides, and Tissue Healing & Inflammation Reduction.",
+      },
+    ],
   },
   peptide: {
-    audience:
-      "A fit when peptides are already part of your patient’s plan.",
+    audience: "For choosing the right peptides.",
     focuses: [
       "Peptide pathways",
       "Individual response",
       "Context before a peptide plan",
     ],
+    markers: [
+      {
+        title: "Fat Loss & Body Composition",
+        body: "Markers assessing genetic response propensity to AOD-9604 (weight maintenance, macronutrient response), Tesamorelin (body composition, long-term maintenance, metabolic effects), IGF-1 LR3 (glucose), and 5-amino-1MQ (insulin sensitivity, weight maintenance, macronutrient response).",
+      },
+      {
+        title: "Mitochondrial Health & Metabolic Optimization",
+        body: "Markers examining metabolic and energy-related peptide response including Tesamorelin (metabolic risk), CJC-1295 (energy capacity), MOTS-C (energy, mitochondrial, metabolic risk), AOD-9604 (metabolic risk), 5-amino-1MQ (metabolic risk), FOXO4-DRI (cellular energy), and Epitalon (redox stress handling).",
+      },
+      {
+        title: "Autonomic Nervous System & Stress Physiology",
+        body: "Markers covering stress and mood-related peptide response: Semax (mood-sleep coupling, stress handling), Selank (mood regulation, anxiolytic response, stress-sleep coupling, stress handling), Epitalon (sleep), FOXO4-DRI (stress resilience), and BPC-157 (pain burden).",
+      },
+      {
+        title: "Hormonal Regulation & Growth Hormone Support",
+        body: "Markers assessing IGF-1 LR3 (anabolic), CJC-1295 (lean mass, sleep depth), Epitalon (circadian timing), and PT-141 (androgen milieu, hormonal balance, sex-hormone signaling).",
+      },
+      {
+        title: "Athletic Performance & Recovery",
+        body: "Markers examining IGF-1 LR3 (strength potential, training capacity, training recovery), MOTS-C (exercise adaptation), and TB4 / TB-500 (injury).",
+      },
+      {
+        title: "Cognitive Enhancement & Brain Health",
+        body: "Markers covering Semax (executive function, cognitive performance, attention), Cerebrolysin (global cognition, cognitive decline susceptibility, neurodegeneration risk, Parkinsonian dementia context, vascular cognition), and DiHexa (focus, memory, global cognition, cognitive decline susceptibility, neurodegeneration risk).",
+      },
+      {
+        title: "Gut Health & Nutrient Absorption",
+        body: "Markers examining Teduglutide (fat-soluble nutrient absorption, absorptive capacity, IBD-related risk, barrier integrity) and BPC-157 (gut barrier).",
+      },
+      {
+        title: "Skin, Hair & Cosmetic Health",
+        body: "Markers covering Melanotan-2 (melanocortin, UV damage resilience, pigmentation change, photoaging susceptibility) and GHK-Cu (dermal structure, oxidative stress handling, skin barrier, skin aging susceptibility, scalp microcirculation, hair growth support).",
+      },
+      {
+        title: "Immune System Support",
+        body: "Markers examining TA1 / Thymosin Alpha 1 response for autoimmune context and anti-inflammatory benefit.",
+      },
+      {
+        title: "Longevity & Anti-Aging",
+        body: "Markers covering Epitalon (telomere maintenance) and FOXO4-DRI (healthy aging, inflammatory aging, cellular energy).",
+      },
+      {
+        title: "Tissue Healing & Inflammation Reduction",
+        body: "Markers examining TA1 / Thymosin Alpha 1 (immune, baseline inflammation), TB4 / TB-500 (connective tissue, resolution capacity, pain), BPC-157 (soft tissue recovery, joint, inflammation resolution), CJC-1295 (bone remodeling), and IGF-1 LR3 (bone support).",
+      },
+      {
+        title: "Metabolic Medication Response",
+        body: "Markers assessing genetic response propensity to Semaglutide (satiety, insulin sensitivity, glycemic response, maintaining weight loss) and Tirzepatide (appetite control, insulin sensitivity, glycemic response, overall metabolic risk, maintaining weight loss).",
+      },
+    ],
   },
   "glp-1": {
-    audience:
-      "A fit when GLP-1 medication is already part of the care conversation.",
+    audience: "For choosing the right GLP-1 medication.",
     focuses: [
       "25 genetic markers",
       "How biology may interact with GLP-1 medications",
       "Context for a medication conversation",
     ],
+    markersIntro:
+      "Markers examining genetic response propensity across three GLP medications.",
+    markers: [
+      {
+        title: "Semaglutide",
+        body: "Satiety, insulin sensitivity, glycemic response, and maintaining weight loss.",
+      },
+      {
+        title: "Tirzepatide",
+        body: "Appetite control, insulin sensitivity, glycemic response, overall metabolic risk, and maintaining weight loss.",
+      },
+      {
+        title: "Retatrutide",
+        body: "Appetite reduction, blood sugar response, maintaining weight loss, low-carb diet response, glycemic response, and overall metabolic risk.",
+      },
+    ],
   },
   "toxin-gut": {
-    audience:
-      "A fit when digestion, nutrient absorption, or detox pathways are the focus.",
+    audience: "For gut health and detoxification.",
     focuses: ["Digestion", "Nutrient absorption", "Detoxification pathways"],
+    markers: [
+      {
+        title: "Gut Health",
+        body: "Looks at genetic factors associated with gut-related conditions and intestinal barrier function, including Crohn’s disease risk, Ulcerative Colitis risk, and Gut Permeability.",
+      },
+      {
+        title: "Detoxification — Phase 1",
+        body: "Examines how the body metabolizes common substances at the cellular level, including NSAIDs, Caffeine, Mold, Phthalates, General Medications (CYP2D6), and Acetaminophen.",
+      },
+      {
+        title: "Detoxification — Phase 2",
+        body: "Covers the body’s secondary detox pathways including Glutathione production, Acetylation, Glucuronidation, and key enzyme activity markers: NRF2, MTHFR, Catalase, NAT2, and SOD2.",
+      },
+      {
+        title: "Detoxification — Phase 3",
+        body: "Looks at the body’s ability to transport and eliminate metabolic byproducts, including Estrogen Metabolite Elimination.",
+      },
+      {
+        title: "Heavy Metal & Environmental Exposure",
+        body: "Examines genetic susceptibility to environmental toxins including Fluoride, Arsenic, Mercury, and Lead exposure risk, as well as CBS Activity related to sulfur metabolism.",
+      },
+      {
+        title: "Inflammation Markers",
+        body: "Includes Oxidative Stress support, Histamine sensitivity (general and food-based), IL-10 Inflammation Risk, CRP Inflammation, Benzene Risk, and NRF2 Activity.",
+      },
+      {
+        title: "Alcohol Genetics",
+        body: "Looks at genetic factors related to Alcohol Metabolism, Alcohol Inflammation Risk, Alcohol Abuse Risk, and APOe Status.",
+      },
+      {
+        title: "BPC-157 Response",
+        body: "Assesses genetic factors associated with individual response to BPC-157, including Inflammation Resolution and Gut Barrier benefit.",
+      },
+    ],
   },
 };
