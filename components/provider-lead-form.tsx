@@ -154,7 +154,12 @@ export function ProviderLeadForm() {
   const submitting = status === "submitting";
 
   return (
-    <form onSubmit={onSubmit} noValidate className="flex max-w-2xl flex-col gap-8">
+    <form
+      onSubmit={onSubmit}
+      noValidate
+      data-hs-do-not-collect="true"
+      className="flex max-w-2xl flex-col gap-8"
+    >
       <div className="grid gap-6 sm:grid-cols-2">
         {fields.map((field) => {
           const id = `lead-${field.name}`;
