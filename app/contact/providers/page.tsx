@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
 import { PageIntro } from "@/components/page-intro";
 import { PageShell } from "@/components/page-shell";
-import { ProviderLeadForm } from "@/components/provider-lead-form";
+import { HubSpotLeadForm } from "@/components/hubspot-lead-form";
+import { providerForm } from "@/lib/lead-forms";
 import { contactEmail, gpoUrl } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
@@ -19,7 +20,12 @@ export default function ProviderContactPage() {
         and how ordering works.
       </PageIntro>
       <section className="grid gap-16 px-5 py-16 sm:px-8 lg:grid-cols-[1fr_280px] lg:px-16 lg:py-24">
-        <ProviderLeadForm />
+        <HubSpotLeadForm
+          id="provider-contact"
+          {...providerForm}
+          submitLabel="Contact us"
+          successMessage="Someone from ICONUS will reach out to walk you through the panels and how ordering works."
+        />
         <aside className="flex flex-col gap-8 border-t border-line pt-8 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-10">
           <div>
             <p className="font-mono text-sm text-gold uppercase">Already a GenoGPO customer?</p>

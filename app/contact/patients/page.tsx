@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
-import { PlaceholderForm } from "@/components/placeholder-form";
+import { HubSpotLeadForm } from "@/components/hubspot-lead-form";
 import { PageIntro } from "@/components/page-intro";
 import { PageShell } from "@/components/page-shell";
+import { patientForm } from "@/lib/lead-forms";
 import { contactEmail, portalUrl } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
@@ -11,12 +12,6 @@ export const metadata: Metadata = pageMetadata({
   path: "/contact/patients",
 });
 
-const fields = [
-  { name: "name", label: "Name", autoComplete: "name" },
-  { name: "email", label: "Email", kind: "email", autoComplete: "email" },
-  { name: "message", label: "Message", kind: "textarea" },
-] as const;
-
 export default function PatientContactPage() {
   return (
     <PageShell>
@@ -24,7 +19,12 @@ export default function PatientContactPage() {
         Ask about a kit, a panel, or results. To register a kit or sign in, use the patient portal.
       </PageIntro>
       <section className="grid gap-16 px-5 py-16 sm:px-8 lg:grid-cols-[1fr_280px] lg:px-16 lg:py-24">
-        <PlaceholderForm id="patient-contact" fields={fields} submitLabel="Send message" />
+        <HubSpotLeadForm
+          id="patient-contact"
+          {...patientForm}
+          submitLabel="Send message"
+          successMessage="Someone from ICONUS will get back to you. For questions about your results, also follow up with your provider."
+        />
         <aside className="flex flex-col gap-8 border-t border-line pt-8 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-10">
           <div>
             <p className="font-mono text-sm text-gold uppercase">Email</p>
@@ -34,9 +34,6 @@ export default function PatientContactPage() {
             >
               {contactEmail}
             </a>
-            <p className="mt-3 text-sm leading-[1.6] font-light text-ink">
-              Email is the way to reach ICONUS until this form is connected.
-            </p>
           </div>
           <div>
             <p className="font-mono text-sm text-gold uppercase">Register or sign in</p>
