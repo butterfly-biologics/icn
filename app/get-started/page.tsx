@@ -9,20 +9,20 @@ import { gpoUrl } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Order ICONUS — ICONUS",
   description:
-    "ICONUS kits are purchased through GenoGPO. Log in to the GenoGPO portal to choose panels and place an order for your practice.",
+    "Bring ICONUS to your practice. Contact us to get started, or log in to GenoGPO if you're already a customer.",
   path: "/get-started",
 });
 
 const orderSteps = [
   {
     number: "01",
-    title: "Log in to GenoGPO",
-    body: "GenoGPO is the group purchasing organization for practices that order ICONUS.",
+    title: "Talk with us",
+    body: "Tell us about your practice. We’ll walk you through the panels and set you up with GenoGPO.",
   },
   {
     number: "02",
-    title: "Choose your panels",
-    body: "Select the ICONUS panels that fit your patients’ goals and place your order.",
+    title: "Order through GenoGPO",
+    body: "Select the ICONUS panels that fit your patients’ goals and place your order on genogpo.com.",
   },
   {
     number: "03",
@@ -34,20 +34,19 @@ const orderSteps = [
 export default function GetStartedPage() {
   return (
     <PageShell>
-      <PageIntro eyebrow="Get started" title="Order ICONUS through GenoGPO.">
-        Purchasing for ICONUS lives on the GenoGPO portal. Log in to choose panels and order kits
-        for your practice.
+      <PageIntro eyebrow="Get started" title="Bring ICONUS to your practice.">
+        Contact us and we’ll walk you through the panels and how ordering works. Kits are purchased
+        through GenoGPO, our group purchasing organization.
       </PageIntro>
 
       <section className="px-5 py-16 sm:px-8 lg:px-16 lg:py-24">
-        <div className="flex flex-col items-start gap-4 sm:flex-row">
-          <ButtonLink href={gpoUrl}>Log in to GenoGPO</ButtonLink>
-          <ButtonLink href="/contact/providers" variant="outline">
-            Bulk kits or white label
-          </ButtonLink>
-        </div>
-        <p className="mt-4 font-mono text-sm text-ink uppercase">
-          You’ll be taken to genogpo.com
+        <ButtonLink href="/contact/providers">Contact us</ButtonLink>
+        <p className="mt-6 text-lg leading-[1.6] font-light text-ink">
+          Already a GenoGPO customer?{" "}
+          <a href={gpoUrl} className="underline hover:text-gold">
+            Log in to order
+          </a>
+          .
         </p>
 
         <ol className="mt-16 grid gap-8 lg:grid-cols-3">

@@ -119,7 +119,7 @@ export const questions = [
   {
     question: "How do I order kits?",
     answer:
-      "ICONUS kits are purchased through GenoGPO, our group purchasing organization. Log in at genogpo.com to choose panels and place an order.",
+      "ICONUS kits are purchased through GenoGPO, our group purchasing organization. New to ICONUS? Contact us and we’ll walk you through it. Existing GenoGPO customers can log in at genogpo.com to order.",
   },
   {
     question: "How do I choose a panel for my patient?",
@@ -155,11 +155,6 @@ export const moreQuestions = [
       "To purchase kits, log in to GenoGPO at genogpo.com. To view results, providers and patients sign in at my.iconus.org.",
   },
   {
-    question: "Can I order in bulk or under my practice’s brand?",
-    answer:
-      "Yes. Use the provider contact form to ask about bulk kits or a white-label version of ICONUS.",
-  },
-  {
     question: "Does the quiz choose a panel?",
     answer:
       "The quiz suggests a starting point. It is not a diagnosis and it does not place an order. The final panel is chosen by the provider with the patient.",
@@ -172,7 +167,7 @@ export const moreQuestions = [
   {
     question: "How do I reach ICONUS?",
     answer:
-      "Use the contact page. Providers can ask about ordering, bulk kits or white label. Patients with results should sign in to the portal and follow up with their provider.",
+      "Use the contact page. Providers can use the provider contact form to talk with us. Patients with results should sign in to the portal and follow up with their provider.",
   },
 ] as const;
 

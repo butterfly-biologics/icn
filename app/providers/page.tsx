@@ -4,7 +4,7 @@ import { ButtonLink } from "@/components/button-link";
 import { PageIntro } from "@/components/page-intro";
 import { PageShell } from "@/components/page-shell";
 import { stages } from "@/lib/content";
-import { portalUrl } from "@/lib/site";
+import { gpoUrl, portalUrl } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "For providers — ICONUS",
@@ -22,14 +22,18 @@ export default function ProvidersPage() {
       </PageIntro>
       <section className="flex flex-col items-start gap-6 px-5 py-16 sm:px-8 lg:px-16 lg:py-24">
         <div className="flex flex-col items-start gap-4 sm:flex-row">
-          <ButtonLink href="/get-started">Get started</ButtonLink>
-          <ButtonLink href="/contact/providers" variant="outline">
-            Bulk kits or white label
-          </ButtonLink>
+          <ButtonLink href="/contact/providers">Contact us</ButtonLink>
           <ButtonLink href={portalUrl} variant="outline">
             Portal login
           </ButtonLink>
         </div>
+        <p className="text-lg leading-[1.6] font-light text-ink">
+          Already a GenoGPO customer?{" "}
+          <a href={gpoUrl} className="underline hover:text-gold">
+            Log in to order
+          </a>
+          .
+        </p>
         <ol className="mt-8 w-full max-w-3xl">
           {stages.map((stage) => (
             <li key={stage.number} className="flex gap-6 border-t border-line py-6">

@@ -3,26 +3,26 @@ import { pageMetadata } from "@/lib/metadata";
 import { ButtonLink } from "@/components/button-link";
 import { PageIntro } from "@/components/page-intro";
 import { PageShell } from "@/components/page-shell";
-import { portalUrl } from "@/lib/site";
+import { gpoUrl, portalUrl } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Contact — ICONUS",
-  description: "Provider orders, bulk kits, white label, portal sign-in, and patient questions.",
+  description: "Provider inquiries, GenoGPO ordering, portal sign-in, and patient questions.",
   path: "/contact",
 });
 
 const paths = [
   {
     title: "Providers",
-    body: "Ask about bulk kits or a white-label version.",
+    body: "Talk with us about bringing ICONUS to your practice.",
     href: "/contact/providers",
-    label: "Provider contact",
+    label: "Contact us",
   },
   {
     title: "Order kits",
-    body: "Practices purchase ICONUS through the GenoGPO portal.",
-    href: "/get-started",
-    label: "Get started",
+    body: "Already a GenoGPO customer? Log in to order kits.",
+    href: gpoUrl,
+    label: "Log in to GenoGPO",
   },
   {
     title: "Portal",
