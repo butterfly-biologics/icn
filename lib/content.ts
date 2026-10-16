@@ -67,8 +67,8 @@ export const principles = [
 export const steps = [
   {
     number: "01",
-    title: "Kits shipped direct to patient",
-    body: "Choose a panel and order through GenoGPO. The kit ships straight to your patient.",
+    title: "Kits shipped to patient or practice",
+    body: "Choose a panel and order through GenoGPO. Ship kits straight to your patient, or order in bulk for your practice.",
   },
   {
     number: "02",
@@ -129,7 +129,7 @@ export const questions = [
   {
     question: "What sample does my patient provide?",
     answer:
-      "A simple cheek swab, completed at home. The kit ships directly to your patient and includes a prepaid return mailer.",
+      "A simple cheek swab, completed at home. Kits ship directly to your patient or in bulk to your practice, and each includes a prepaid return mailer.",
   },
   {
     question: "Where will I see results?",
@@ -172,7 +172,7 @@ export const moreQuestions = [
 ] as const;
 
 export const essentials = [
-  "Kits ship direct to your patients",
+  "Kits ship to patients or your practice",
   "Simple at-home cheek swab",
   "Eight goal-focused panels",
   "Results in your provider portal",

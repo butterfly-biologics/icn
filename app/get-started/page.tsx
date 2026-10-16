@@ -26,8 +26,8 @@ const orderSteps = [
   },
   {
     number: "03",
-    title: "Kits ship to your patients",
-    body: "Results arrive in your provider portal at my.iconus.org in about 3–4 weeks.",
+    title: "Kits ship to patient or practice",
+    body: "Ship kits directly to patients or in bulk to your practice. Results arrive in your provider portal at my.iconus.org in about 3–4 weeks.",
   },
 ];
 
