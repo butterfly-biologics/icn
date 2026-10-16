@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ButtonLink } from "@/components/button-link";
 import { PageShell } from "@/components/page-shell";
+import { AddOnPanels } from "@/components/sections/add-on-panels";
 import { getPanel, panelPages, panels, steps } from "@/lib/content";
 
 type PanelPageProps = {
@@ -83,7 +84,9 @@ export default async function PanelPage({ params }: PanelPageProps) {
           </ul>
         </section>
 
-        <section className="border-t border-line px-5 py-16 sm:px-8 lg:px-16 lg:py-24">
+        <AddOnPanels panelTitle={panel.title} />
+
+        <section className="px-5 py-16 sm:px-8 lg:px-16 lg:py-24">
           <h2 className="mb-12 max-w-xl text-4xl leading-[1.08] sm:text-5xl lg:tracking-[-1.2px]">
             Simple for you. Simple for them.
           </h2>

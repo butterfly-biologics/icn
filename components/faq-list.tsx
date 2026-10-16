@@ -3,9 +3,15 @@
 import { useState } from "react";
 import { questions } from "@/lib/content";
 
+type FaqPoint = {
+  title: string;
+  body: string;
+};
+
 type FaqItem = {
   question: string;
   answer: string;
+  points?: readonly FaqPoint[];
 };
 
 type FaqListProps = {
@@ -48,14 +54,23 @@ export function FaqList({ items = questions, tone = "gold" }: FaqListProps) {
               </button>
             </h3>
             {open ? (
-              <p
-                id={panelId}
-                role="region"
-                aria-labelledby={buttonId}
-                className={`mt-3.5 max-w-3xl text-lg leading-[1.6] font-light lg:text-2xl ${answerClass}`}
-              >
-                {item.answer}
-              </p>
+              <div id={panelId} role="region" aria-labelledby={buttonId}>
+                <p className={`mt-3.5 max-w-3xl text-lg leading-[1.6] font-light lg:text-2xl ${answerClass}`}>
+                  {item.answer}
+                </p>
+                {item.points ? (
+                  <ul className="mt-4 flex max-w-3xl flex-col gap-3">
+                    {item.points.map((point) => (
+                      <li
+                        key={point.title}
+                        className={`text-lg leading-[1.6] font-light lg:text-2xl ${answerClass}`}
+                      >
+                        <span className="font-medium">{point.title}</span> {point.body}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </div>
             ) : null}
           </div>
         );

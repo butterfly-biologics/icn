@@ -122,6 +122,11 @@ export const questions = [
       "ICONUS kits are purchased through GenoGPO, our group purchasing organization. New to ICONUS? Contact us and we’ll walk you through it. Existing GenoGPO customers can log in at genogpo.com to order.",
   },
   {
+    question: "How long do kits last?",
+    answer:
+      "ICONUS kits have a shelf life of about 2–3 years, so it’s easy to keep a supply on hand at your practice. As a general guideline, plan to use kits within 2 years of ordering.",
+  },
+  {
     question: "How do I choose a panel for my patient?",
     answer:
       "Start with your patient’s goals, history and what they hope to understand. Each panel focuses on one area, and the quiz can suggest a starting point.",
@@ -130,6 +135,21 @@ export const questions = [
     question: "What sample does my patient provide?",
     answer:
       "A simple cheek swab, completed at home. Kits ship directly to your patient or in bulk to your practice, and each includes a prepaid return mailer.",
+  },
+  {
+    question: "How does a kit get registered?",
+    answer:
+      "Every kit needs to be registered so results reach the right patient and provider. There are two ways to do it:",
+    points: [
+      {
+        title: "Your patient registers.",
+        body: "They scan the QR code on the kit, create an account, enter their kit code and select you as their provider.",
+      },
+      {
+        title: "You register for them.",
+        body: "Add your patient in your provider portal and register the kit to their profile before handing or mailing it to them.",
+      },
+    ],
   },
   {
     question: "Where will I see results?",
@@ -168,6 +188,21 @@ export const moreQuestions = [
     question: "How do I reach ICONUS?",
     answer:
       "Use the contact page. Providers can use the provider contact form to talk with us. Patients with results should sign in to the portal and follow up with their provider.",
+  },
+] as const;
+
+export const addOnPoints = [
+  {
+    title: "No new swab",
+    body: "Your patient doesn’t need another kit or sample. The add-on uses the DNA we’ve already sequenced.",
+  },
+  {
+    title: "A new report",
+    body: "We analyze the same genetic data through a different panel, focused on a new set of goals.",
+  },
+  {
+    title: "A lower price",
+    body: "The lab work is already done, so add-on panels cost less than a first panel.",
   },
 ] as const;
 

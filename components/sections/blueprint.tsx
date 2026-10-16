@@ -20,7 +20,7 @@ export function Blueprint() {
           width={870}
           height={497}
           sizes="(min-width: 1024px) 480px, 100vw"
-          className="h-auto w-full max-w-[500px] translate-x-[12%] shrink-0"
+          className="h-auto w-full max-w-[500px] shrink-0 sm:translate-x-[12%]"
         />
       </div>
       <ul className="mt-14 grid gap-10 lg:mt-20 lg:grid-cols-3 lg:gap-8">
