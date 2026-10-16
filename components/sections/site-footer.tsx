@@ -84,7 +84,7 @@ export function SiteFooter() {
       <div className="flex flex-col gap-4 font-mono text-sm text-ink uppercase lg:flex-row lg:items-start lg:justify-between">
         <p>© 2026 ICONUS</p>
         <p>Genetic insight is one part of a broader provider–patient conversation.</p>
-        <p className="text-gold">Individual by design</p>
+        <p className="text-gold">Reveal what is possible.</p>
       </div>
     </footer>
   );

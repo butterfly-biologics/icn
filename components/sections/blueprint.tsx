@@ -17,10 +17,11 @@ export function Blueprint() {
         <Image
           src="/brand/kit-box.png"
           alt="ICONUS test kit box"
-          width={870}
-          height={497}
-          sizes="(min-width: 1024px) 480px, 100vw"
-          className="h-auto w-full max-w-[500px] shrink-0 sm:translate-x-[12%]"
+          width={2472}
+          height={2472}
+          sizes="(min-width: 640px) 75vw, 100vw"
+          quality={90}
+          className="h-auto w-screen max-w-none shrink-0 sm:w-[75vw]"
         />
       </div>
       <ul className="mt-14 grid gap-10 lg:mt-20 lg:grid-cols-3 lg:gap-8">
