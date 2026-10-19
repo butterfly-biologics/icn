@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -43,23 +44,33 @@ export default async function PanelPage({ params }: PanelPageProps) {
             All test panels
           </Link>
      
-          <div className="mt-8">
-            <img src={panel.icon.src} width={panel.icon.width} height={panel.icon.height} alt="" />
-          </div>
-          <h1 className="mt-6 max-w-4xl text-4xl leading-[1.08] sm:text-5xl lg:text-[100px]">
-            {panel.title}
-          </h1>
-          <h2 className="mt-5 max-w-3xl text-2xl leading-[1.25] font-medium sm:text-3xl lg:text-[32px]">
-            {detail.audience}
-          </h2>
-          <p className="mt-4 max-w-2xl text-lg leading-[1.6] font-light text-stone">
-            {panel.body}
-          </p>
-          <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row">
-            <ButtonLink href="/get-started">Get started</ButtonLink>
-            <ButtonLink href="/quiz" variant="ghost">
-              Not sure? Take the quiz
-            </ButtonLink>
+          <div className="mt-10 grid items-center gap-6 lg:grid-cols-2 lg:gap-16">
+            <div>
+              <h1 className="max-w-4xl text-4xl leading-[1.08] sm:text-5xl lg:text-[72px]">
+                {panel.title}
+              </h1>
+              <h2 className="mt-5 max-w-3xl text-2xl leading-[1.25] font-medium sm:text-3xl lg:text-[32px]">
+                {detail.audience}
+              </h2>
+              <p className="mt-4 max-w-2xl text-lg leading-[1.6] font-light text-stone">
+                {panel.body}
+              </p>
+              <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row">
+                <ButtonLink href="/get-started">Get started</ButtonLink>
+                <ButtonLink href="/quiz" variant="ghost">
+                  Not sure? Take the quiz
+                </ButtonLink>
+              </div>
+            </div>
+            <Image
+              src={panel.image}
+              alt={`${panel.title} kit`}
+              width={976}
+              height={476}
+              priority
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              className="h-auto w-full"
+            />
           </div>
         </header>
 
@@ -110,9 +121,17 @@ export default async function PanelPage({ params }: PanelPageProps) {
               <li key={item.slug}>
                 <Link
                   href={`/panels/${item.slug}`}
-                  className="flex items-center justify-between border border-line-dark px-6 py-5 font-mono text-sm text-teal uppercase hover:border-cream"
+                  className="flex items-center gap-4 border border-line-dark px-4 py-3 font-mono text-sm text-teal uppercase hover:border-cream"
                 >
-                  {item.title}
+                  <Image
+                    src={item.image}
+                    alt=""
+                    width={976}
+                    height={476}
+                    sizes="120px"
+                    className="h-14 w-auto shrink-0"
+                  />
+                  <span className="flex-1">{item.title}</span>
                   <img src="/brand/arrow-teal.svg" width={16} height={16} alt="" />
                 </Link>
               </li>

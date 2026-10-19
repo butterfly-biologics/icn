@@ -6,9 +6,9 @@ export function Panels() {
     <section id="panels" className="scroll-mt-8 bg-brown px-5 py-16 text-cream sm:px-8 lg:px-16 lg:py-24">
       <div className="mb-12 flex flex-col gap-8 lg:flex-row lg:gap-[100px]">
         <h2 className="max-w-[690px] text-4xl leading-[1.08] sm:text-5xl lg:text-[60px] lg:tracking-[-1.2px]">
-          Different goals.
+          Different goals,
           <br />
-          Precision care.
+          precision care.
         </h2>
         <p className="max-w-xl text-lg leading-[1.6] font-light text-stone lg:pt-2 lg:text-2xl">
           Choose from eight test panels to give your patients targeted
