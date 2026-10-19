@@ -21,11 +21,13 @@ export function Closing() {
           Every person contains more than meets the eye.
         </h2>
         <p className="text-lg leading-[1.6] font-light text-stone sm:text-2xl">
-          ICONUS brings it into view, so you can build plans around what’s possible
+          Iconus brings it into view, so you can build plans around what’s possible
           for them.
         </p>
         <div className="flex flex-col items-start gap-4">
-          <ButtonLink href="/get-started">Get started with ICONUS</ButtonLink>
+          <ButtonLink href="/get-started">
+            Get started with <span className="normal-case">Iconus</span>
+          </ButtonLink>
           <ButtonLink href="#panels" variant="ghost">
             Explore test panels
           </ButtonLink>

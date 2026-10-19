@@ -95,8 +95,8 @@ export function QuizFlow() {
     <div className="flex min-h-screen flex-col bg-cream text-brown">
       <header className="px-5 pt-6 sm:px-8 lg:px-16">
         <div className="flex items-center justify-between gap-6">
-          <Link href="/" aria-label="ICONUS home">
-            <Image src="/brand/wordmark.png" alt="ICONUS" width={140} height={38} priority />
+          <Link href="/" aria-label="Iconus home">
+            <Image src="/brand/wordmark.png" alt="Iconus" width={140} height={38} priority />
           </Link>
           <Link href="/" className="font-mono text-sm uppercase hover:text-gold">
             Exit
@@ -164,7 +164,7 @@ export function QuizFlow() {
               Which panel fits?
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-[1.6] font-light text-ink sm:text-2xl">
-              Four short questions about your patient’s goals. At the end, you’ll see the ICONUS
+              Four short questions about your patient’s goals. At the end, you’ll see the Iconus
               panel that fits where they are today. Patients can take it too, and bring the result
               to their next visit.
             </p>

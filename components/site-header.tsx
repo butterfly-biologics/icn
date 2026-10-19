@@ -33,10 +33,10 @@ export function SiteHeader() {
   return (
     <header className="px-5 sm:px-8 lg:px-16">
       <div className="flex h-[100px] items-center justify-between gap-6 py-10">
-        <Link href="/" aria-label="ICONUS home">
+        <Link href="/" aria-label="Iconus home">
           <Image
             src="/brand/wordmark.png"
-            alt="ICONUS"
+            alt="Iconus"
             width={100}
             height={30}
             priority
@@ -81,8 +81,8 @@ export function SiteHeader() {
           className="fixed inset-0 z-50 flex flex-col overflow-y-auto bg-brown px-5 text-cream sm:px-8 lg:hidden"
         >
           <div className="flex h-[100px] shrink-0 items-center justify-between gap-6 py-10">
-            <Link href="/" aria-label="ICONUS home" onClick={() => setOpen(false)}>
-              <Image src="/brand/wordmark.png" alt="ICONUS" width={100} height={30} />
+            <Link href="/" aria-label="Iconus home" onClick={() => setOpen(false)}>
+              <Image src="/brand/wordmark.png" alt="Iconus" width={100} height={30} />
             </Link>
             <button
               type="button"

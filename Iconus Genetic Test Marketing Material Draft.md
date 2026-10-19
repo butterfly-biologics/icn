@@ -2,7 +2,7 @@
 
 ## **What is it**
 
-ICONUS is a genetic testing platform that gives providers a fixed biological baseline for each patient. The Genetic testing kit offers a  simple cheek swab, no blood draw and no lab visit . The patient swabs at home, mails it back with a prepaid return mailer, and results are delivered to their patient portal and the doctor’s provider portal in approximately **3–4 weeks.** From there, doctors have the genetic data they need to build a plan that fits their patient.
+Iconus is a genetic testing platform that gives providers a fixed biological baseline for each patient. The Genetic testing kit offers a  simple cheek swab, no blood draw and no lab visit . The patient swabs at home, mails it back with a prepaid return mailer, and results are delivered to their patient portal and the doctor’s provider portal in approximately **3–4 weeks.** From there, doctors have the genetic data they need to build a plan that fits their patient.
 
 Each panel targets a specific area of health. Results are scored across three levels:
 
@@ -14,7 +14,7 @@ Giving doctors a clear picture of where to focus and prescribe with confidence.
 
 ## **What patients see when results are ready**
 
-Results are delivered through the ICONUS app portal and organized into report sections by health category. When a patient logs in, they see a dashboard broken into the panels their provider ordered.
+Results are delivered through the Iconus app portal and organized into report sections by health category. When a patient logs in, they see a dashboard broken into the panels their provider ordered.
 
 At the top of their dashboard is a Results Scores Summary which is a visual overview of every marker tested, scored across three levels (as seen above). 
 

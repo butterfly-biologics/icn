@@ -18,9 +18,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PanelPageProps): Promise<Metadata> {
   const { slug } = await params;
   const panel = getPanel(slug);
-  if (!panel) return { title: "Panel — ICONUS" };
+  if (!panel) return { title: "Panel — Iconus" };
   return pageMetadata({
-    title: `${panel.title} — ICONUS`,
+    title: `${panel.title} — Iconus`,
     description: panel.body,
     path: `/panels/${panel.slug}`,
   });

@@ -6,9 +6,9 @@ import { PageShell } from "@/components/page-shell";
 import { portalUrl } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "For patients — ICONUS",
+  title: "For patients — Iconus",
   description:
-    "Register an ICONUS kit, sign in to see results, or find a panel to discuss with your provider.",
+    "Register an Iconus kit, sign in to see results, or find a panel to discuss with your provider.",
   path: "/patients",
 });
 
@@ -37,7 +37,7 @@ export default function PatientsPage() {
   return (
     <PageShell>
       <PageIntro eyebrow="For patients" title="Your biology, with your provider.">
-        ICONUS is ordered and reviewed with your provider. Here’s where to go if you have a kit,
+        Iconus is ordered and reviewed with your provider. Here’s where to go if you have a kit,
         results, or questions.
       </PageIntro>
       <section className="grid gap-8 px-5 py-16 sm:px-8 lg:grid-cols-3 lg:px-16 lg:py-24">

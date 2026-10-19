@@ -3,8 +3,8 @@ import { pageMetadata } from "@/lib/metadata";
 import { QuizFlow } from "@/components/quiz-flow";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Which panel fits? — ICONUS",
-  description: "Answer four short questions to find the ICONUS test panel that fits a patient’s goals.",
+  title: "Which panel fits? — Iconus",
+  description: "Answer four short questions to find the Iconus test panel that fits a patient’s goals.",
   path: "/quiz",
 });
 

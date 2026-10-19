@@ -7,15 +7,15 @@ import { providerForm } from "@/lib/lead-forms";
 import { contactEmail, gpoUrl } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Provider contact — ICONUS",
-  description: "Talk with ICONUS about bringing genetic panels to your practice.",
+  title: "Provider contact — Iconus",
+  description: "Talk with Iconus about bringing genetic panels to your practice.",
   path: "/contact/providers",
 });
 
 export default function ProviderContactPage() {
   return (
     <PageShell>
-      <PageIntro eyebrow="For providers" title="Bring ICONUS to your practice.">
+      <PageIntro eyebrow="For providers" title="Bring Iconus to your practice.">
         Tell us a little about your practice and we’ll be in touch to walk you through the panels
         and how ordering works.
       </PageIntro>
@@ -24,7 +24,7 @@ export default function ProviderContactPage() {
           id="provider-contact"
           {...providerForm}
           submitLabel="Contact us"
-          successMessage="Someone from ICONUS will reach out to walk you through the panels and how ordering works."
+          successMessage="Someone from Iconus will reach out to walk you through the panels and how ordering works."
         />
         <aside className="flex flex-col gap-8 border-t border-line pt-8 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-10">
           <div>

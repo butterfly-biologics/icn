@@ -12,11 +12,13 @@ export function Journey() {
           From first conversation to lasting change.
         </h2>
         <p className="text-lg leading-[1.6] font-light text-stone sm:text-2xl">
-          ICONUS isn’t a one-time test. It’s the foundation of a journey you guide,
+          Iconus isn’t a one-time test. It’s the foundation of a journey you guide,
           from understanding your patient’s biology to building a plan, preparing
           for it and growing with it over time.
         </p>
-        <ButtonLink href="/get-started">Bring ICONUS to your practice</ButtonLink>
+        <ButtonLink href="/get-started">
+          Bring <span className="normal-case">Iconus</span> to your practice
+        </ButtonLink>
       </div>
 
       <ol className="min-w-0 flex-1">

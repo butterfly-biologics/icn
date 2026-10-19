@@ -16,7 +16,7 @@ export function Blueprint() {
         </div>
         <Image
           src="/brand/kit-box.png"
-          alt="ICONUS test kit box"
+          alt="Iconus test kit box"
           width={2472}
           height={2472}
           sizes="(min-width: 640px) 75vw, 100vw"

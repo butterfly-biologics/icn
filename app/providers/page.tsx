@@ -7,9 +7,9 @@ import { stages } from "@/lib/content";
 import { gpoUrl, portalUrl } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "For providers — ICONUS",
+  title: "For providers — Iconus",
   description:
-    "Bring ICONUS to your practice. A focused genetic panel, results in both portals, and a plan you guide.",
+    "Bring Iconus to your practice. A focused genetic panel, results in both portals, and a plan you guide.",
   path: "/providers",
 });
 
@@ -17,7 +17,7 @@ export default function ProvidersPage() {
   return (
     <PageShell>
       <PageIntro eyebrow="For providers" title="From first conversation to lasting change.">
-        ICONUS isn’t a one-time test. It’s the foundation of a journey you guide, from understanding
+        Iconus isn’t a one-time test. It’s the foundation of a journey you guide, from understanding
         your patient’s biology to building a plan.
       </PageIntro>
       <section className="flex flex-col items-start gap-6 px-5 py-16 sm:px-8 lg:px-16 lg:py-24">

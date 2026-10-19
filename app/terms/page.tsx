@@ -6,8 +6,8 @@ import { PageShell } from "@/components/page-shell";
 import { contactEmail } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Terms — ICONUS",
-  description: "How to use the ICONUS website, quiz, and panel descriptions.",
+  title: "Terms — Iconus",
+  description: "How to use the Iconus website, quiz, and panel descriptions.",
   path: "/terms",
 });
 
@@ -34,7 +34,7 @@ export default function TermsPage() {
   return (
     <PageShell>
       <PageIntro eyebrow="Terms" title="How to use this site.">
-        These terms cover the ICONUS marketing pages. They are written in plain language.
+        These terms cover the Iconus marketing pages. They are written in plain language.
       </PageIntro>
       <article className="flex max-w-3xl flex-col gap-12 px-5 py-16 sm:px-8 lg:px-16 lg:py-24">
         {sections.map((section) => (

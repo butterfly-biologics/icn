@@ -7,8 +7,8 @@ import { PageShell } from "@/components/page-shell";
 import { moreQuestions, questions } from "@/lib/content";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Questions — ICONUS",
-  description: "Practical answers about ordering ICONUS kits, choosing panels, and reviewing results.",
+  title: "Questions — Iconus",
+  description: "Practical answers about ordering Iconus kits, choosing panels, and reviewing results.",
   path: "/faq",
 });
 

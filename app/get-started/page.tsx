@@ -7,9 +7,9 @@ import { PageShell } from "@/components/page-shell";
 import { gpoUrl } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Order ICONUS — ICONUS",
+  title: "Order Iconus — Iconus",
   description:
-    "Bring ICONUS to your practice. Contact us to get started, or log in to GenoGPO if you're already a customer.",
+    "Bring Iconus to your practice. Contact us to get started, or log in to GenoGPO if you're already a customer.",
   path: "/get-started",
 });
 
@@ -22,7 +22,7 @@ const orderSteps = [
   {
     number: "02",
     title: "Order through GenoGPO",
-    body: "Select the ICONUS panels that fit your patients’ goals and place your order on genogpo.com.",
+    body: "Select the Iconus panels that fit your patients’ goals and place your order on genogpo.com.",
   },
   {
     number: "03",
@@ -34,7 +34,7 @@ const orderSteps = [
 export default function GetStartedPage() {
   return (
     <PageShell>
-      <PageIntro eyebrow="Get started" title="Bring ICONUS to your practice.">
+      <PageIntro eyebrow="Get started" title="Bring Iconus to your practice.">
         Contact us and we’ll walk you through the panels and how ordering works. Kits are purchased
         through GenoGPO, our group purchasing organization.
       </PageIntro>
@@ -66,7 +66,7 @@ export default function GetStartedPage() {
 
       <aside className="border-t border-line px-5 py-12 sm:px-8 lg:px-16" aria-label="For patients">
         <p className="max-w-2xl text-lg leading-[1.6] font-light text-ink">
-          Are you a patient? ICONUS is ordered by your provider.{" "}
+          Are you a patient? Iconus is ordered by your provider.{" "}
           <Link href="/patients" className="underline hover:text-gold">
             Visit the patient page
           </Link>{" "}

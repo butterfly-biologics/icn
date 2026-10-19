@@ -6,15 +6,15 @@ import { PageShell } from "@/components/page-shell";
 import { contactEmail, portalUrl } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Privacy — ICONUS",
-  description: "How this ICONUS website handles the information you share with it.",
+  title: "Privacy — Iconus",
+  description: "How this Iconus website handles the information you share with it.",
   path: "/privacy",
 });
 
 const sections = [
   {
     title: "This website",
-    body: "These pages introduce ICONUS test panels. They do not store genetic results, kit orders, or portal accounts. Those live in the portal at my.iconus.org, which has its own sign-in.",
+    body: "These pages introduce Iconus test panels. They do not store genetic results, kit orders, or portal accounts. Those live in the portal at my.iconus.org, which has its own sign-in.",
   },
   {
     title: "What you send us",
@@ -22,7 +22,7 @@ const sections = [
   },
   {
     title: "The quiz",
-    body: "Quiz answers stay in your browser for that visit. They are used only to suggest a panel. They are not a medical record and they are not sent to ICONUS unless you later include them in a message.",
+    body: "Quiz answers stay in your browser for that visit. They are used only to suggest a panel. They are not a medical record and they are not sent to Iconus unless you later include them in a message.",
   },
   {
     title: "The portal",

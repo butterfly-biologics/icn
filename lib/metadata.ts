@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const siteName = "ICONUS";
+export const siteName = "Iconus";
 
 export const siteUrl = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://iconus.org");
 
@@ -14,7 +14,7 @@ const shareImage = {
   url: "/og-image.png",
   width: 1024,
   height: 537,
-  alt: "ICONUS — Reveal what is possible",
+  alt: "Iconus — Reveal what is possible",
 };
 
 export function pageMetadata({ title, description, path }: PageMetadataInput): Metadata {

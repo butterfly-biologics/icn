@@ -6,7 +6,7 @@ import { PageShell } from "@/components/page-shell";
 import { gpoUrl, portalUrl } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Contact — ICONUS",
+  title: "Contact — Iconus",
   description: "Provider inquiries, GenoGPO ordering, portal sign-in, and patient questions.",
   path: "/contact",
 });
@@ -14,7 +14,7 @@ export const metadata: Metadata = pageMetadata({
 const paths = [
   {
     title: "Providers",
-    body: "Talk with us about bringing ICONUS to your practice.",
+    body: "Talk with us about bringing Iconus to your practice.",
     href: "/contact/providers",
     label: "Contact us",
   },

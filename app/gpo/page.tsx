@@ -6,8 +6,8 @@ import { PageShell } from "@/components/page-shell";
 import { gpoUrl } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "GenoGPO — ICONUS",
-  description: "GenoGPO is the group purchasing organization for practices that order with ICONUS.",
+  title: "GenoGPO — Iconus",
+  description: "GenoGPO is the group purchasing organization for practices that order with Iconus.",
   path: "/gpo",
 });
 

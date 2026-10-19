@@ -87,7 +87,7 @@ export const stages = [
     number: "01",
     label: "The Conversation",
     title: "Start with who they are.",
-    body: "Talk about goals, history and what your patient hopes to understand. Choose the ICONUS panel that fits where they are today.",
+    body: "Talk about goals, history and what your patient hopes to understand. Choose the Iconus panel that fits where they are today.",
   },
   {
     number: "02",
@@ -105,7 +105,7 @@ export const stages = [
     number: "04",
     label: "The Program",
     title: "Put the plan into motion.",
-    body: "Where formulations fit, ICONUS results highlight GenoGenRx options aligned with your patient’s profile, for you to review, adjust and recommend.",
+    body: "Where formulations fit, Iconus results highlight GenoGenRx options aligned with your patient’s profile, for you to review, adjust and recommend.",
   },
   {
     number: "05",
@@ -119,12 +119,12 @@ export const questions = [
   {
     question: "How do I order kits?",
     answer:
-      "ICONUS kits are purchased through GenoGPO, our group purchasing organization. New to ICONUS? Contact us and we’ll walk you through it. Existing GenoGPO customers can log in at genogpo.com to order.",
+      "Iconus kits are purchased through GenoGPO, our group purchasing organization. New to Iconus? Contact us and we’ll walk you through it. Existing GenoGPO customers can log in at genogpo.com to order.",
   },
   {
     question: "How long do kits last?",
     answer:
-      "ICONUS kits have a shelf life of about 2–3 years, so it’s easy to keep a supply on hand at your practice. As a general guideline, plan to use kits within 2 years of ordering.",
+      "Iconus kits have a shelf life of about 2–3 years, so it’s easy to keep a supply on hand at your practice. As a general guideline, plan to use kits within 2 years of ordering.",
   },
   {
     question: "How do I choose a panel for my patient?",
@@ -182,10 +182,10 @@ export const moreQuestions = [
   {
     question: "I’m a patient. Where do I start?",
     answer:
-      "ICONUS is meant to be used with a provider. Visit the patient page to register a kit, sign in to see results, or take the quiz to bring a starting point to your next visit.",
+      "Iconus is meant to be used with a provider. Visit the patient page to register a kit, sign in to see results, or take the quiz to bring a starting point to your next visit.",
   },
   {
-    question: "How do I reach ICONUS?",
+    question: "How do I reach Iconus?",
     answer:
       "Use the contact page. Providers can use the provider contact form to talk with us. Patients with results should sign in to the portal and follow up with their provider.",
   },
