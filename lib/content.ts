@@ -49,6 +49,13 @@ export const panels = [
     image: "/panels/glp-1.png",
   },
   {
+    slug: "glp-lifestyle-nutrition",
+    title: "GLP + Lifestyle and Nutrition",
+    body: "This panel pairs everything in GLP-1 Benefit Genetics with a broad look at nutrition and lifestyle genetics. It covers vitamins and minerals, how the body processes carbohydrates and fats, hunger and fullness signals, fitness, and how your patient’s markers line up with common eating styles, all in one report. Results show genetic tendencies in each area, organized so you and your patient can review them together.",
+    icon: { src: "/brand/panel-glp1.svg", width: 33.2, height: 33.2 },
+    image: "/panels/glp-lifestyle-nutrition.png",
+  },
+  {
     slug: "toxin-gut",
     title: "Toxin & Gut Complete",
     body: "This panel examines how your patient’s genetics may relate to digestion, nutrient absorption, and detoxification pathways. Results may help guide personalized lifestyle and nutrition recommendations in support of gut health.",
@@ -222,7 +229,7 @@ export const addOnPoints = [
 export const essentials = [
   "Kits ship to patients or your practice",
   "Simple at-home cheek swab",
-  "Eight goal-focused panels",
+  "Nine goal-focused panels",
   "Results in your provider portal",
   "Results in about 3–4 weeks",
   "Built for the follow-up visit",
@@ -533,6 +540,45 @@ export const panelPages: Record<
       {
         title: "Retatrutide",
         body: "Appetite reduction, blood sugar response, maintaining weight loss, low-carb diet response, glycemic response, and overall metabolic risk.",
+      },
+    ],
+  },
+  "glp-lifestyle-nutrition": {
+    audience:
+      "GLP-1 pathway markers plus nutrition, metabolism and fitness genetics in one report.",
+    focuses: [
+      "GLP-1 and body composition",
+      "Nutrition, hunger, and metabolism",
+      "Fitness and eating styles",
+    ],
+    markers: [
+      {
+        title: "GLP-1 and body composition",
+        body: "All markers in GLP-1 Benefit Genetics.",
+      },
+      {
+        title: "Vitamins and minerals",
+        body: "B vitamins, vitamins A, C, D and E, iron, zinc, copper, selenium, iodine, choline and carotenoids.",
+      },
+      {
+        title: "Nutrition",
+        body: "Carbohydrate, fat and protein processing, omega fatty acids and food sensitivity markers.",
+      },
+      {
+        title: "Hunger and fullness",
+        body: "Appetite, fullness and snacking tendencies.",
+      },
+      {
+        title: "Metabolic markers",
+        body: "Blood sugar, adiponectin, LP(a) and heart-related markers.",
+      },
+      {
+        title: "Fitness",
+        body: "Strength, VO2 max, recovery and soft tissue markers.",
+      },
+      {
+        title: "Eating styles",
+        body: "How markers line up with low-carb, keto, Mediterranean, DASH, paleo, vegetarian, vegan and other eating styles.",
       },
     ],
   },

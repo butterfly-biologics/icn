@@ -11,15 +11,15 @@ export function Panels() {
           precision care.
         </h2>
         <p className="max-w-xl text-lg leading-[1.6] font-light text-stone lg:pt-2 lg:text-2xl">
-          Choose from eight test panels to give your patients targeted
+          Choose from nine test panels to give your patients targeted
           recommendations for their health goals.
         </p>
       </div>
 
-      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {panels.map((panel) => (
           <li key={panel.slug} id={panel.slug} className="scroll-mt-8">
-            <article className="flex h-full min-h-[420px] flex-col justify-between border border-line-dark p-7 xl:h-[500px]">
+            <article className="flex h-full min-h-[420px] flex-col justify-between border border-line-dark p-7 lg:min-h-[500px]">
               <div className="flex flex-col items-start gap-5">
                 <img
                   src={panel.icon.src}
