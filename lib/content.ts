@@ -165,6 +165,11 @@ export const questions = [
       "Results are delivered to your provider portal and your patient’s portal, so you can review the findings together.",
   },
   {
+    question: "Can I see the results? Are they easy to read?",
+    answer:
+      "Yes. Every marker is scored Needs Attention, Moderate, or Optimal, and the findings that need a conversation are listed first. Open a marker and you get a gauge, a plain-language label, and a short note on what it may mean, so you and your patient can read the same report together.",
+  },
+  {
     question: "How long do results take?",
     answer:
       "About 3–4 weeks. Once results are in, schedule a follow-up visit to walk through them with your patient.",

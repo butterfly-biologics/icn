@@ -17,7 +17,7 @@ export function Journey() {
           for it and growing with it over time.
         </p>
         <ButtonLink href="/get-started">
-          Bring <span className="normal-case">Iconus</span> to your practice
+          Bring Iconus to your practice
         </ButtonLink>
       </div>
 

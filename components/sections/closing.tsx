@@ -26,7 +26,7 @@ export function Closing() {
         </p>
         <div className="flex flex-col items-start gap-4">
           <ButtonLink href="/get-started">
-            Get started with <span className="normal-case">Iconus</span>
+            Get started with Iconus
           </ButtonLink>
           <ButtonLink href="#panels" variant="ghost">
             Explore test panels

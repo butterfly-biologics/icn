@@ -14,15 +14,7 @@ export function Blueprint() {
             biology.
           </p>
         </div>
-        <Image
-          src="/brand/kit-box.png"
-          alt="Iconus test kit box"
-          width={2472}
-          height={2472}
-          sizes="(min-width: 640px) 75vw, 100vw"
-          quality={90}
-          className="h-auto w-screen max-w-none shrink-0 sm:w-[75vw]"
-        />
+        
       </div>
       <ul className="mt-14 grid gap-10 lg:mt-20 lg:grid-cols-3 lg:gap-8">
         {principles.map((principle) => (
