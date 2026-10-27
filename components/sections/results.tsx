@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { PatientResultsVideo } from "@/components/patient-results-video";
 
 const shots = [
   {
@@ -19,7 +20,7 @@ const shots = [
 
 export function Results() {
   return (
-    <section className="px-5 py-16 sm:px-8 lg:px-16 lg:py-24">
+    <section className="bg-[#EFEFEF] px-5 py-16 sm:px-8 lg:px-16 lg:py-24">
       <div className="max-w-3xl">
       
         <h2 className="mt-4 text-4xl leading-[1.08] sm:text-5xl lg:text-[60px] lg:tracking-[-1.2px]">
@@ -50,6 +51,7 @@ export function Results() {
           </li>
         ))}
       </ul>
+      <PatientResultsVideo />
     </section>
   );
 }

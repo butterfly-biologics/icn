@@ -43,7 +43,7 @@ export function SiteHeader() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-14 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
           <ul className="flex items-center gap-8 font-mono text-sm text-cream uppercase">
             {links.map((link) => (
               <li key={link.href}>
