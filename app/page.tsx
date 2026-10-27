@@ -2,6 +2,7 @@ import { Closing } from "@/components/sections/closing";
 import { GlpFeature } from "@/components/sections/glp-feature";
 import { Hero } from "@/components/sections/hero";
 import { Journey } from "@/components/sections/journey";
+import { Markers } from "@/components/sections/markers";
 import { Panels } from "@/components/sections/panels";
 import { Process } from "@/components/sections/process";
 import { Questions } from "@/components/sections/questions";
@@ -18,6 +19,7 @@ export default function HomePage() {
       <Panels />
       <QuizBand />
       <Process />
+      <Markers />
       <Journey />
       <Questions />
       <Closing />
