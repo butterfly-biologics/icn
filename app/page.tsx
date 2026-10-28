@@ -15,11 +15,12 @@ export default function HomePage() {
     <main>
       <Hero />
       <GlpFeature />
-      <Results />
+      
       <Panels />
       <QuizBand />
       <Process />
       <Markers />
+      <Results />
       <Journey />
       <Questions />
       <Closing />
